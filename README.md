@@ -26,7 +26,20 @@ I built this tool mainly so I could **easily download code completion files and 
 Recommended way is with [uv](https://docs.astral.sh/uv/):
 
 ```bash
-uv tool install git+<repo>
+uv tool install git+https://github.com/Dolomirr/alpine-downloader.git
+```
+
+Alternative:
+```bash
+# install
+git clone https://github.com/Dolomirr/alpine-downloader.git
+cd alpine-downloader
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+
+# run
+python -m alpine_downloader <args>
 ```
 
 
