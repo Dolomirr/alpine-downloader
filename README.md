@@ -26,7 +26,11 @@ I built this tool mainly so I could **easily download code completion files and 
 Recommended way is with [uv](https://docs.astral.sh/uv/):
 
 ```bash
+# install
 uv tool install git+https://github.com/Dolomirr/alpine-downloader.git
+
+# run
+alpine-downloader <args>
 ```
 
 Alternative:
