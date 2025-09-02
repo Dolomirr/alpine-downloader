@@ -1,6 +1,6 @@
 [project]
 name = "alpine-downloader"
-version = "0.1.0"
+version = "0.1.1"
 description = "Simple link parser and downloader for alpine linux package repository."
 readme = "README.md"
 authors = [
