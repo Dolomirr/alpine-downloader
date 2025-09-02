@@ -20,7 +20,7 @@ def process(
     Does NOT print the list of sensible files; caller is responsible for final output.
     """
     package_url = convert_alpine_package_url(url, arch_override=arch_override)
-    archive = download_archive_to_tempdir(package_url, keep_tmp=False)
+    archive = download_archive_to_tempdir(package_url, keep_tmp=True)
 
     if verbose:
         print(f"\n[Processing] {url}")
@@ -36,6 +36,7 @@ def process(
     if not silent:
         print("\n[Unpacking archive...]")
 
+    # TODO: why is that
     archive.unpack_archive()
 
     return archive.get_file_list(full=True)
@@ -106,3 +107,4 @@ def main(argv=None):
 if __name__ == "__main__":
     # print(convert_alpine_package_url("https://pkgs.alpinelinux.org/package/edge/community/x86/eza-fish-completion"))
     main()
+
